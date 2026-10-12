@@ -1,0 +1,2414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TWSA Training & Services | Stay Safe. Stay Smart. Stay Ahead.</title>
+<meta name="description" content="TWSA Training & Services is a Ugandan company delivering accredited safety, technical, driver and rider training for oil and gas, energy and construction.">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== RESET & VARIABLES ===== */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--blue: #2D56A6;
+--blue-deep: #1F3F80;
+--navy: #1B2733;
+--sky: #4DB3E0;
+--sky-soft: #E6F3FA;
+--red: #D42A2A;
+--orange: #FF5500;
+--royal: #0009D9;
+--grey: #E4E6EA;
+--grey-line: #C9CDD6;
+--bg: #FFFFFF;
+--bg-alt: #F3F6FB;
+--ink: #1B2733;
+--ink-soft: #4A5666;
+--card: #FFFFFF;
+--head: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+--body: 'Plus Jakarta Sans', 'Montserrat', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+--maxw: 1180px;
+--glass: rgba(255, 255, 255, 0.7);
+--glass-line: rgba(255, 255, 255, 0.85);
+--glass-shadow: 0 10px 34px rgba(31, 63, 128, 0.16);
+--radius: 16px;
+--radius-sm: 8px;
+}
+
+html {
+scroll-behavior: smooth;
+scroll-padding-top: calc(84px + env(safe-area-inset-top, 0px));
+}
+
+body {
+margin: 0;
+background: #DCE9F8;
+position: relative;
+color: var(--ink);
+font-family: var(--body);
+font-size: 16px;
+line-height: 1.65;
+-webkit-font-smoothing: antialiased;
+}
+
+/* dynamic background blobs */
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+z-index: -1;
+pointer-events: none;
+background:
+radial-gradient(520px 520px at 8% 12%, rgba(45, 86, 166, 0.55), transparent 70%),
+radial-gradient(560px 560px at 92% 22%, rgba(77, 179, 224, 0.65), transparent 70%),
+radial-gradient(520px 520px at 85% 82%, rgba(255, 85, 0, 0.38), transparent 70%),
+radial-gradient(520px 520px at 12% 88%, rgba(212, 42, 42, 0.30), transparent 70%),
+radial-gradient(600px 600px at 50% 50%, rgba(0, 9, 217, 0.22), transparent 70%);
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+a {
+color: inherit;
+}
+
+h1, h2, h3, h4 {
+font-family: var(--head);
+line-height: 1.15;
+letter-spacing: -0.01em;
+}
+
+p {
+margin: 0;
+}
+
+:focus-visible {
+outline: 3px solid var(--sky);
+outline-offset: 3px;
+border-radius: 4px;
+}
+
+/* ===== UTILITY ===== */
+.wrap {
+width: min(var(--maxw), 100% - 40px);
+margin-inline: auto;
+}
+
+.skip {
+position: absolute;
+left: -999px;
+top: 8px;
+background: #fff;
+color: #000;
+padding: 8px 14px;
+z-index: 200;
+}
+
+.skip:focus {
+left: 8px;
+}
+
+/* ===== GLASS SURFACES ===== */
+.glass {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: var(--radius);
+}
+
+/* ===== HEADER ===== */
+header.site {
+position: sticky;
+top: 0;
+z-index: 50;
+background: var(--glass);
+backdrop-filter: blur(18px) saturate(170%);
+-webkit-backdrop-filter: blur(18px) saturate(170%);
+border-bottom: 1px solid var(--glass-line);
+padding-top: env(safe-area-inset-top, 0px);
+}
+
+.nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 72px;
+gap: 16px;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+text-decoration: none;
+flex-shrink: 0;
+}
+
+.brand img {
+width: 46px;
+height: 46px;
+}
+
+.brand b {
+font-family: var(--head);
+font-weight: 800;
+font-size: 1.35rem;
+letter-spacing: 0.28em;
+color: var(--blue);
+}
+
+.brand small {
+display: block;
+font-family: var(--head);
+font-size: 0.68rem;
+font-weight: 500;
+color: var(--ink-soft);
+letter-spacing: 0.02em;
+margin-top: -2px;
+}
+
+.menu {
+display: flex;
+gap: 4px;
+align-items: center;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.menu a {
+display: block;
+padding: 8px 12px;
+text-decoration: none;
+font-family: var(--head);
+font-weight: 600;
+font-size: 0.86rem;
+border-radius: 6px;
+color: var(--ink);
+transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+color: var(--blue);
+background: rgba(255, 255, 255, 0.7);
+}
+
+.menu a.cta {
+background: var(--blue);
+color: #fff;
+margin-left: 6px;
+}
+
+.menu a.cta:hover {
+background: var(--blue-deep);
+color: #fff;
+}
+
+.burger {
+display: none;
+background: none;
+border: 1px solid var(--grey-line);
+width: 44px;
+height: 44px;
+border-radius: 8px;
+cursor: pointer;
+color: var(--ink);
+padding: 0;
+place-items: center;
+}
+
+.burger span {
+display: block;
+width: 20px;
+height: 2px;
+background: currentColor;
+margin: 4px auto;
+transition: transform 0.25s, opacity 0.25s;
+}
+
+.burger[aria-expanded="true"] span:nth-child(1) {
+transform: translateY(6px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+opacity: 0;
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ===== HERO ===== */
+.hero {
+position: relative;
+background: color-mix(in srgb, var(--blue) 30%, white 70%);
+color: var(--ink);
+overflow: hidden;
+isolation: isolate;
+}
+
+.hero-photo {
+position: absolute;
+inset: 0 0 0 38%;
+z-index: -2;
+clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hero-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center 30%;
+}
+
+.hero::after {
+content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+height: 10px;
+background: linear-gradient(90deg, var(--sky), var(--blue), var(--red));
+z-index: 1;
+}
+
+.hero-slash {
+position: absolute;
+z-index: -1;
+left: -10%;
+bottom: -40px;
+width: 60%;
+height: 120px;
+background: linear-gradient(90deg, rgba(77, 179, 224, 0.45), transparent);
+transform: skewY(-18deg);
+}
+
+.hero-in {
+padding: 90px 0 110px;
+min-height: min(86vh, 720px);
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 540px;
+}
+
+.hero .tag {
+font-family: var(--head);
+font-weight: 600;
+font-size: 1.02rem;
+color: var(--ink);
+margin-bottom: 18px;
+display: flex;
+gap: 14px;
+flex-wrap: wrap;
+}
+
+.hero .tag span {
+padding: 4px 12px;
+border-left: 3px solid var(--red);
+background: var(--glass);
+backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+font-size: clamp(2.1rem, 4.4vw, 3.4rem);
+font-weight: 800;
+margin-bottom: 20px;
+color: #1F3F80;
+}
+
+.hero p.lead {
+font-size: 1.1rem;
+max-width: 520px;
+color: var(--ink-soft);
+margin-bottom: 30px;
+}
+
+.btns {
+display: flex;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 14px 26px;
+border-radius: 6px;
+font-family: var(--head);
+font-weight: 700;
+font-size: 0.92rem;
+text-decoration: none;
+border: 2px solid transparent;
+cursor: pointer;
+transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn.primary {
+background: var(--red);
+color: #fff;
+}
+
+.btn.primary:hover {
+background: #b81f1f;
+}
+
+.btn.ghost {
+border-color: var(--blue);
+color: var(--blue);
+background: rgba(255, 255, 255, 0.5);
+}
+
+.btn.ghost:hover {
+background: var(--blue);
+color: #fff;
+}
+
+.btn.blue {
+background: var(--blue);
+color: #fff;
+}
+
+.btn.blue:hover {
+background: var(--blue-deep);
+}
+
+.btn.orange {
+background: var(--orange);
+color: #fff;
+}
+
+.btn.orange:hover {
+background: #e04a00;
+}
+
+.hero-in > * {
+animation: rise 0.8s both;
+}
+
+.hero-in > *:nth-child(2) {
+animation-delay: 0.1s;
+}
+
+.hero-in > *:nth-child(3) {
+animation-delay: 0.2s;
+}
+
+.hero-in > *:nth-child(4) {
+animation-delay: 0.3s;
+}
+
+@keyframes rise {
+from {
+opacity: 0;
+transform: translateY(22px);
+}
+to {
+opacity: 1;
+transform: none;
+}
+}
+
+/* ===== STATS ===== */
+.stats {
+background: var(--glass);
+backdrop-filter: blur(14px) saturate(160%);
+-webkit-backdrop-filter: blur(14px) saturate(160%);
+border-bottom: 1px solid var(--glass-line);
+color: var(--ink);
+}
+
+.stats ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+}
+
+.stats li {
+padding: 30px 22px;
+border-left: 1px solid var(--grey-line);
+}
+
+.stats li:first-child {
+border-left: 0;
+}
+
+.stats b {
+display: block;
+font-family: var(--head);
+font-size: clamp(2rem, 4vw, 2.9rem);
+font-weight: 800;
+color: var(--blue);
+line-height: 1;
+}
+
+.stats span {
+font-size: 0.92rem;
+color: var(--ink-soft);
+}
+
+/* ===== SECTIONS ===== */
+section {
+padding: 92px 0;
+background: var(--glass);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+}
+
+section.alt {
+background: rgba(236, 244, 252, 0.7);
+}
+
+.sec-head {
+max-width: 700px;
+margin-bottom: 46px;
+}
+
+.sec-head h2 {
+font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+font-weight: 800;
+margin-bottom: 14px;
+}
+
+.sec-head h2::after {
+content: "";
+display: block;
+width: 64px;
+height: 5px;
+background: var(--blue);
+margin-top: 16px;
+}
+
+.sec-head p {
+color: var(--ink-soft);
+font-size: 1.05rem;
+}
+
+.center {
+text-align: center;
+margin-inline: auto;
+}
+
+.center h2::after {
+margin-inline: auto;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+display: grid;
+grid-template-columns: 1.05fr 1fr;
+gap: 56px;
+align-items: center;
+}
+
+.about-photos {
+position: relative;
+padding-bottom: 70px;
+}
+
+.about-photos .a1 {
+width: 88%;
+border-radius: var(--radius);
+aspect-ratio: 3/2;
+object-fit: cover;
+box-shadow: 12px 12px 0 var(--sky);
+}
+
+.about-photos .a2 {
+position: absolute;
+right: 0;
+bottom: 0;
+width: 46%;
+aspect-ratio: 1/1;
+object-fit: cover;
+border: 8px solid rgba(255, 255, 255, 0.85);
+border-radius: var(--radius);
+}
+
+.about-copy p {
+color: var(--ink-soft);
+margin-bottom: 16px;
+}
+
+.vm {
+display: grid;
+gap: 16px;
+margin-top: 26px;
+}
+
+.vm div {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: var(--radius);
+padding: 22px 26px 22px 28px;
+color: var(--ink);
+}
+
+.vm h3 {
+font-size: 1rem;
+margin-bottom: 6px;
+padding-bottom: 8px;
+border-bottom: 2px solid var(--blue);
+display: inline-block;
+color: var(--blue);
+}
+
+.vm p {
+color: var(--ink-soft);
+margin: 0;
+font-size: 0.95rem;
+}
+
+.why {
+margin-top: 60px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 0 40px;
+list-style: none;
+padding: 0;
+}
+
+.why li {
+padding: 16px 0 16px 26px;
+border-bottom: 1px solid var(--grey-line);
+position: relative;
+font-family: var(--head);
+font-weight: 600;
+font-size: 0.95rem;
+}
+
+.why li::before {
+content: "";
+position: absolute;
+left: 0;
+top: 25px;
+width: 12px;
+height: 12px;
+border-radius: 50%;
+background: var(--sky);
+}
+
+/* ===== SERVICES ===== */
+.filters {
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+margin-bottom: 30px;
+}
+
+.filters button {
+font-family: var(--head);
+font-weight: 700;
+font-size: 0.85rem;
+padding: 10px 18px;
+border: 2px solid var(--blue);
+background: var(--glass);
+backdrop-filter: blur(10px);
+color: var(--blue);
+border-radius: 999px;
+cursor: pointer;
+transition: background 0.2s, color 0.2s;
+}
+
+.filters button[aria-pressed="true"] {
+background: var(--blue);
+color: #fff;
+}
+
+.svc-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+gap: 24px;
+}
+
+.svc {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: var(--radius);
+display: flex;
+flex-direction: column;
+text-align: left;
+padding: 0;
+cursor: pointer;
+font: inherit;
+color: inherit;
+overflow: hidden;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.svc:hover {
+transform: translateY(-4px);
+box-shadow: 0 18px 40px rgba(31, 63, 128, 0.22);
+}
+
+.svc .ph {
+aspect-ratio: 16/10;
+overflow: hidden;
+position: relative;
+}
+
+.svc .ph img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s;
+}
+
+.svc:hover .ph img {
+transform: scale(1.05);
+}
+
+.svc h3 {
+background: rgba(255, 255, 255, 0.7);
+color: var(--blue);
+font-size: 1rem;
+padding: 15px 22px;
+border-bottom: 3px solid var(--blue);
+margin: 0;
+}
+
+.svc .tx {
+padding: 18px 22px 22px;
+color: var(--ink-soft);
+font-size: 0.92rem;
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.svc .tx span:first-child {
+display: -webkit-box;
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+.svc .more {
+font-family: var(--head);
+font-weight: 700;
+color: var(--blue);
+font-size: 0.84rem;
+margin-top: auto;
+}
+
+.svc[hidden] {
+display: none;
+}
+
+/* ===== DIALOGS ===== */
+dialog {
+border: 0;
+padding: 0;
+border-radius: var(--radius);
+background: var(--card);
+color: var(--ink);
+width: min(760px, calc(100% - 28px));
+max-height: calc(100vh - 40px);
+overflow: auto;
+box-shadow: 0 30px 60px rgba(15, 23, 34, 0.4);
+}
+
+dialog::backdrop {
+background: rgba(31, 63, 128, 0.35);
+backdrop-filter: blur(6px);
+}
+
+.dlg-img {
+aspect-ratio: 16/8;
+width: 100%;
+object-fit: cover;
+}
+
+.dlg-body {
+padding: 28px 32px 34px;
+}
+
+.dlg-body h3 {
+font-size: 1.6rem;
+margin-bottom: 12px;
+}
+
+.dlg-body p {
+color: var(--ink-soft);
+margin-bottom: 20px;
+}
+
+.dlg-body h4 {
+background: rgba(230, 243, 250, 0.8);
+padding: 8px 16px;
+font-size: 0.95rem;
+margin-bottom: 12px;
+color: var(--blue);
+border-radius: 8px;
+}
+
+.dlg-body ul {
+margin: 0 0 24px;
+padding-left: 20px;
+}
+
+.dlg-body li {
+margin-bottom: 6px;
+}
+
+.close {
+position: absolute;
+right: 12px;
+top: 12px;
+width: 42px;
+height: 42px;
+border-radius: 50%;
+border: 0;
+background: #fff;
+color: #000;
+font-size: 1.5rem;
+cursor: pointer;
+line-height: 1;
+z-index: 2;
+display: grid;
+place-items: center;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== DRIVING ===== */
+.drive {
+background: color-mix(in srgb, var(--royal) 30%, white 70%);
+color: var(--ink);
+position: relative;
+overflow: hidden;
+}
+
+.drive .sec-head p {
+color: var(--ink-soft);
+}
+
+.drive .sec-head h2::after {
+background: var(--orange);
+}
+
+.drive-hero {
+display: grid;
+grid-template-columns: 1.1fr 1fr;
+gap: 48px;
+align-items: center;
+margin-bottom: 56px;
+}
+
+.drive-hero .ph {
+position: relative;
+}
+
+.drive-hero .ph img.main {
+width: 100%;
+aspect-ratio: 4/3;
+object-fit: cover;
+border-radius: var(--radius);
+}
+
+.drive-hero .ph img.sub {
+position: absolute;
+right: -14px;
+bottom: -34px;
+width: 42%;
+aspect-ratio: 4/3;
+object-fit: cover;
+border: 6px solid rgba(255, 255, 255, 0.85);
+border-radius: var(--radius);
+}
+
+.drive-hero .badge {
+position: absolute;
+left: -12px;
+top: 22px;
+background: var(--orange);
+color: #fff;
+font-family: var(--head);
+font-weight: 700;
+padding: 10px 18px;
+font-size: 0.9rem;
+border-radius: 4px;
+}
+
+.drive-hero h3 {
+font-size: clamp(1.6rem, 3vw, 2.3rem);
+margin-bottom: 16px;
+color: #1F2A8F;
+}
+
+.drive-hero h3 i {
+font-style: italic;
+color: var(--orange);
+}
+
+.drive-hero p {
+color: var(--ink-soft);
+margin-bottom: 14px;
+}
+
+.dgrid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 26px;
+}
+
+.dcard {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: var(--radius);
+overflow: visible;
+position: relative;
+padding-bottom: 10px;
+color: #1B2733;
+}
+
+.dcard .ph {
+height: 190px;
+overflow: hidden;
+border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.dcard .ph img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.dcard h3 {
+background: rgba(27, 39, 51, 0.82);
+backdrop-filter: blur(10px);
+color: #fff;
+font-size: 1.05rem;
+text-align: center;
+padding: 14px 16px;
+margin: -26px 24px 14px;
+border: 3px solid rgba(255, 255, 255, 0.85);
+border-radius: 10px;
+position: relative;
+}
+
+.dcard ul {
+list-style: none;
+margin: 0;
+padding: 6px 22px 16px;
+}
+
+.dcard li {
+padding: 7px 0 7px 26px;
+position: relative;
+font-size: 0.95rem;
+}
+
+.dcard li::before {
+content: "";
+position: absolute;
+left: 0;
+top: 13px;
+width: 10px;
+height: 10px;
+background: var(--royal);
+clip-path: polygon(0 0, 60% 0, 100% 50%, 60% 100%, 0 100%, 40% 50%);
+}
+
+.dwhy {
+margin-top: 64px;
+display: grid;
+grid-template-columns: 1fr 1.4fr;
+gap: 44px;
+align-items: center;
+}
+
+.dwhy .ph {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+
+.dwhy .ph img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: var(--radius-sm);
+min-height: 240px;
+}
+
+.dwhy .ph img:first-child {
+grid-column: 1/-1;
+aspect-ratio: 16/9;
+min-height: 0;
+}
+
+.dwhy ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 22px 30px;
+}
+
+.dwhy li {
+border-left: 4px solid var(--orange);
+padding-left: 14px;
+}
+
+.dwhy li b {
+display: block;
+font-family: var(--head);
+margin-bottom: 4px;
+}
+
+.dwhy li span {
+color: var(--ink-soft);
+font-size: 0.92rem;
+}
+
+.dimpact {
+margin-top: 60px;
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+gap: 0;
+border-top: 1px solid var(--grey-line);
+}
+
+.dimpact div {
+padding: 24px 14px 0;
+border-left: 1px solid var(--grey-line);
+}
+
+.dimpact div:first-child {
+border-left: 0;
+padding-left: 0;
+}
+
+.dimpact b {
+display: block;
+font-family: var(--head);
+font-size: 2rem;
+color: var(--orange);
+font-weight: 800;
+line-height: 1.1;
+}
+
+.dimpact span {
+font-size: 0.85rem;
+color: var(--ink-soft);
+display: block;
+}
+
+/* ===== TEAM ===== */
+.mgmt {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 26px;
+margin-bottom: 70px;
+}
+
+.person {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: var(--radius);
+padding: 28px 26px;
+border-left: 5px solid var(--blue);
+}
+
+.avatar {
+width: 72px;
+height: 72px;
+border-radius: 50%;
+border: 4px solid var(--blue);
+display: grid;
+place-items: center;
+font-family: var(--head);
+font-weight: 800;
+color: var(--blue);
+font-size: 1.25rem;
+background: rgba(255, 255, 255, 0.7);
+margin-bottom: 16px;
+}
+
+.person h3 {
+font-size: 1.1rem;
+}
+
+.person .role {
+font-family: var(--head);
+font-weight: 600;
+font-size: 0.82rem;
+color: var(--red);
+padding: 6px 0;
+margin: 6px 0 12px;
+border-top: 1px solid var(--grey-line);
+border-bottom: 1px solid var(--grey-line);
+}
+
+.person ul {
+margin: 0;
+padding-left: 18px;
+color: var(--ink-soft);
+font-size: 0.9rem;
+}
+
+.person li {
+margin-bottom: 4px;
+}
+
+.trainers {
+display: grid;
+grid-template-columns: 0.8fr 1.2fr;
+gap: 0;
+position: relative;
+}
+
+.trainer-photo {
+position: relative;
+min-height: 360px;
+overflow: hidden;
+border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.trainer-photo img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+object-position: center 20%;
+}
+
+.trainer-list {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: 0 var(--radius) var(--radius) 0;
+color: var(--ink);
+padding: 34px 34px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px 28px;
+align-content: start;
+}
+
+.trainer-list .ttl {
+grid-column: 1/-1;
+font-size: 1.6rem;
+margin-bottom: 4px;
+}
+
+.trainer-list article {
+padding: 0 0 4px;
+}
+
+.trainer-list h4 {
+font-size: 1rem;
+color: var(--ink);
+}
+
+.trainer-list h4 small {
+display: block;
+font-weight: 500;
+font-size: 0.8rem;
+color: var(--blue);
+margin-top: 2px;
+}
+
+.trainer-list p {
+font-size: 0.86rem;
+color: var(--ink-soft);
+margin-top: 6px;
+}
+
+/* ===== PROJECTS ===== */
+.gallery {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 14px;
+}
+
+.gal {
+position: relative;
+border: 0;
+padding: 0;
+cursor: pointer;
+overflow: hidden;
+aspect-ratio: 4/3;
+background: #000;
+border-radius: var(--radius-sm);
+}
+
+.gal img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.5s, opacity 0.3s;
+}
+
+.gal:hover img {
+transform: scale(1.06);
+opacity: 0.85;
+}
+
+.gal span {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 26px 12px 10px;
+background: linear-gradient(transparent, rgba(15, 23, 34, 0.92));
+color: #fff;
+text-align: left;
+font-family: var(--head);
+font-size: 0.8rem;
+font-weight: 600;
+}
+
+.gal span em {
+display: block;
+font-style: normal;
+font-weight: 500;
+color: var(--sky);
+font-size: 0.74rem;
+}
+
+.gal.big {
+grid-column: span 2;
+grid-row: span 2;
+aspect-ratio: auto;
+}
+
+#lb {
+background: #000;
+width: min(1000px, calc(100% - 20px));
+padding: 0;
+}
+
+#lb img {
+width: 100%;
+max-height: 78vh;
+object-fit: contain;
+background: #000;
+}
+
+#lb p {
+padding: 14px 20px;
+color: #fff;
+font-family: var(--head);
+font-weight: 600;
+background: var(--blue);
+}
+
+/* ===== CLIENTS ===== */
+.logos {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+gap: 14px;
+margin-bottom: 46px;
+}
+
+.logo-chip {
+border: 1px solid var(--glass-line);
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border-radius: var(--radius);
+box-shadow: var(--glass-shadow);
+padding: 18px 14px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+text-align: center;
+min-height: 78px;
+font-family: var(--head);
+font-weight: 700;
+font-size: 0.9rem;
+color: var(--ink);
+}
+
+.logo-chip img {
+height: 44px;
+width: auto;
+border-radius: 4px;
+background: #fff;
+}
+
+.logo-chip.red {
+color: #E03B1B;
+}
+
+.logo-chip.green {
+color: #0F8A3C;
+}
+
+.logo-chip.bluec {
+color: #1563A8;
+}
+
+.logo-chip.navyc {
+color: #2B3E80;
+}
+
+.sub-h {
+font-size: 1.1rem;
+margin-bottom: 16px;
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.sub-h::after {
+content: "";
+flex: 1;
+height: 1px;
+background: var(--grey-line);
+}
+
+/* ===== CONTACT ===== */
+.contact {
+background: var(--glass);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+color: var(--ink);
+position: relative;
+overflow: hidden;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1.1fr;
+gap: 56px;
+}
+
+.contact h2 {
+font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+font-weight: 800;
+margin-bottom: 20px;
+}
+
+.contact h2 span {
+color: var(--blue);
+}
+
+.contact dl {
+margin: 0 0 26px;
+display: grid;
+gap: 18px;
+}
+
+.contact dt {
+font-family: var(--head);
+font-weight: 700;
+color: var(--blue);
+font-size: 0.85rem;
+}
+
+.contact dd {
+margin: 0;
+font-size: 1.05rem;
+}
+
+.contact dd a {
+text-decoration: none;
+border-bottom: 1px solid rgba(27, 39, 51, 0.4);
+}
+
+.contact-photo {
+border-radius: var(--radius);
+overflow: hidden;
+aspect-ratio: 16/9;
+}
+
+.contact-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+form {
+background: var(--glass);
+backdrop-filter: blur(16px) saturate(170%);
+-webkit-backdrop-filter: blur(16px) saturate(170%);
+border: 1px solid var(--glass-line);
+box-shadow: var(--glass-shadow);
+border-radius: var(--radius);
+color: var(--ink);
+padding: 32px;
+display: grid;
+gap: 16px;
+}
+
+form h3 {
+font-size: 1.3rem;
+}
+
+label {
+font-family: var(--head);
+font-weight: 600;
+font-size: 0.84rem;
+display: grid;
+gap: 6px;
+}
+
+input, select, textarea {
+font: inherit;
+padding: 12px 14px;
+border: 1.5px solid rgba(27, 39, 51, 0.25);
+border-radius: 6px;
+background: rgba(255, 255, 255, 0.75);
+color: #1B2733;
+width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+outline: 3px solid var(--sky);
+border-color: var(--blue);
+}
+
+textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.row2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 14px;
+}
+
+.note {
+font-size: 0.84rem;
+color: #4A5666;
+min-height: 1.2em;
+}
+
+/* ===== FOOTER ===== */
+footer {
+background: var(--glass);
+backdrop-filter: blur(14px);
+-webkit-backdrop-filter: blur(14px);
+border-top: 1px solid var(--glass-line);
+color: var(--ink-soft);
+padding: 42px 0 30px;
+font-size: 0.9rem;
+}
+
+.foot {
+display: flex;
+justify-content: space-between;
+gap: 26px;
+flex-wrap: wrap;
+align-items: center;
+}
+
+.foot .brand b {
+color: var(--blue);
+}
+
+.foot .brand small {
+color: var(--ink-soft);
+}
+
+.foot nav {
+display: flex;
+gap: 18px;
+flex-wrap: wrap;
+}
+
+.foot nav a {
+text-decoration: none;
+}
+
+.foot nav a:hover {
+color: var(--blue);
+}
+
+.copy {
+margin-top: 26px;
+padding-top: 20px;
+border-top: 1px solid var(--grey-line);
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+font-size: 0.8rem;
+}
+
+.top {
+position: fixed;
+right: 18px;
+bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+width: 46px;
+height: 46px;
+border-radius: 50%;
+border: 0;
+background: var(--red);
+color: #fff;
+font-size: 1.2rem;
+cursor: pointer;
+opacity: 0;
+pointer-events: none;
+transition: opacity 0.25s;
+z-index: 40;
+display: grid;
+place-items: center;
+}
+
+.top.show {
+opacity: 1;
+pointer-events: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1000px) {
+.burger {
+display: block;
+}
+
+.menu {
+position: absolute;
+left: 0;
+right: 0;
+top: 100%;
+background: rgba(255, 255, 255, 0.92);
+backdrop-filter: blur(18px);
+flex-direction: column;
+align-items: stretch;
+padding: 12px 20px 20px;
+border-bottom: 1px solid var(--grey-line);
+display: none;
+gap: 2px;
+}
+
+.menu.open {
+display: flex;
+}
+
+.menu a.cta {
+margin: 8px 0 0;
+text-align: center;
+}
+
+.hero-photo {
+inset: 0;
+clip-path: none;
+opacity: 0.28;
+}
+
+.hero-in {
+max-width: none;
+}
+
+.stats ul {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.stats li:nth-child(3) {
+border-left: 0;
+}
+
+.stats li {
+border-top: 1px solid var(--grey-line);
+}
+
+.stats li:nth-child(-n+2) {
+border-top: 0;
+}
+
+.about-grid,
+.drive-hero,
+.dwhy,
+.contact-grid,
+.trainers {
+grid-template-columns: 1fr;
+}
+
+.dgrid,
+.mgmt {
+grid-template-columns: 1fr 1fr;
+}
+
+.why {
+grid-template-columns: 1fr 1fr;
+}
+
+.gallery {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.dimpact {
+grid-template-columns: repeat(3, 1fr);
+}
+
+.dimpact div:nth-child(4) {
+border-left: 0;
+padding-left: 0;
+}
+
+.trainer-photo {
+min-height: 260px;
+border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.trainer-list {
+border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.drive-hero .ph img.sub {
+right: 8px;
+}
+}
+
+@media (max-width: 640px) {
+section {
+padding: 64px 0;
+}
+
+.dgrid,
+.mgmt,
+.why,
+.row2,
+.dwhy ul,
+.trainer-list {
+grid-template-columns: 1fr;
+}
+
+.gal.big {
+grid-column: span 2;
+grid-row: auto;
+aspect-ratio: 4/3;
+}
+
+.dimpact {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.dimpact div {
+padding-left: 14px;
+}
+
+.dimpact div:nth-child(odd) {
+border-left: 0;
+padding-left: 0;
+}
+
+.dimpact div:nth-child(4) {
+border-left: 1px solid var(--grey-line);
+padding-left: 14px;
+}
+
+.dwhy .ph {
+grid-template-columns: 1fr;
+}
+
+.hero-in {
+padding: 64px 0 90px;
+}
+
+.brand b {
+letter-spacing: 0.2em;
+font-size: 1.15rem;
+}
+
+.brand small {
+display: none;
+}
+
+form {
+padding: 22px;
+}
+
+.dlg-body {
+padding: 22px 20px 26px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+* {
+animation: none !important;
+transition: none !important;
+scroll-behavior: auto !important;
+}
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+.vm div,
+.svc,
+.person,
+.logo-chip,
+form,
+.dcard,
+dialog,
+.trainer-list {
+background: rgba(255, 255, 255, 0.92);
+}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site">
+<div class="wrap nav">
+<a class="brand" href="#top" aria-label="TWSA home">
+<img data-img="logo" alt="TWSA logo" width="46" height="46">
+<span><b>TWSA</b><small>Training &amp; Services</small></span>
+</a>
+<button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+<span></span><span></span><span></span>
+</button>
+<ul class="menu" id="menu">
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#driving">Driving &amp; Rider</a></li>
+<li><a href="#team">Team</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#clients">Clients</a></li>
+<li><a class="cta" href="#contact">Contact us</a></li>
+</ul>
+</div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<div class="hero" id="top">
+<div class="hero-photo"><img data-img="hero" alt="TWSA trainees holding their certificates after a training session"></div>
+<div class="hero-slash"></div>
+<div class="wrap">
+<div class="hero-in">
+<div class="tag"><span>Stay Safe.</span><span>Stay Smart.</span><span>Stay Ahead.</span></div>
+<h1>Safety and technical training for East Africa's workforce.</h1>
+<p class="lead">TWSA Training &amp; Services is a Ugandan company delivering professional, accredited and industry-relevant training for the oil and gas, energy and construction sectors.</p>
+<div class="btns">
+<a class="btn primary" href="#services">Explore our courses</a>
+<a class="btn ghost" href="#contact">Request a quote</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="stats">
+<div class="wrap">
+<ul>
+<li><b data-count="1200" data-suffix="+">1,200+</b><span>Certified trainees</span></li>
+<li><b data-count="8">08</b><span>Satisfied partner companies</span></li>
+<li><b data-count="10">10</b><span>Core training programs</span></li>
+<li><b data-count="6">6</b><span>Lead trainers with national and international certification</span></li>
+</ul>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="wrap">
+<div class="about-grid">
+<div class="about-photos">
+<img class="a1" data-img="about" alt="Trainees practising breathing apparatus rescue on a slope">
+<img class="a2" data-img="gas" alt="Hands holding a multi-gas detector during a training session">
+</div>
+<div class="about-copy">
+<div class="sec-head" style="margin-bottom:22px"><h2>Walk the journey. Level up.</h2></div>
+<p>More than a service provider, we are your trusted partner on the path to success. We believe in walking alongside you, empowering action through knowledge, driving growth through innovation, and turning your potential into tangible results.</p>
+<p>TWSA Training and Services is a Ugandan company committed to delivering professional, accredited, and industry-relevant training programs. We specialize in technical and safety training for the oil and gas, energy, and construction sectors, with a strong focus on national content and local workforce development.</p>
+<div class="vm">
+<div><h3>Vision</h3><p>To be the trusted partner in workforce transformation and technical skills development across East Africa, driving excellence through quality training and strategic services.</p></div>
+<div><h3>Mission statement</h3><p>To empower individuals and industries through world-class training, certification, and workforce solutions that support safety, competence, and sustainable development in key economic sectors.</p></div>
+</div>
+</div>
+</div>
+<h3 class="sub-h" style="margin-top:70px">Why choose us?</h3>
+<ul class="why">
+<li>Quality Service Guaranteed</li>
+<li>Experience You Can Trust</li>
+<li>Certified &amp; Experienced Trainers</li>
+<li>Comprehensive Curriculum</li>
+<li>Flexible Scheduling</li>
+<li>Affordable Pricing</li>
+</ul>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="alt">
+<div class="wrap">
+<div class="sec-head"><h2>Our services</h2><p>Select any course to see what it covers and the key objectives participants learn.</p></div>
+<div class="filters" role="group" aria-label="Filter courses">
+<button data-f="all" aria-pressed="true">All courses</button>
+<button data-f="safety" aria-pressed="false">Safety &amp; emergency</button>
+<button data-f="industrial" aria-pressed="false">Industrial &amp; technical</button>
+<button data-f="driving" aria-pressed="false">Driving</button>
+</div>
+<div class="svc-grid" id="svcGrid"></div>
+</div>
+</section>
+
+<!-- DRIVING -->
+<section id="driving" class="drive">
+<div class="wrap">
+<div class="sec-head"><h2>Driving &amp; Rider Department</h2><p>Driving safety. Professionalism. Performance. Practical training solutions designed to enhance safety, competence, and professionalism on and off the road.</p></div>
+<div class="drive-hero">
+<div class="ph">
+<img class="main" data-img="drv" alt="Driving instructor standing beside a TWSA training car with a learner at the wheel">
+<img class="sub" data-img="drvcar" alt="Instructor coaching a trainee driver inside a car">
+<div class="badge">Profile 2026</div>
+</div>
+<div>
+<h3>Developing safer, more competent and <i>responsible</i> drivers and riders.</h3>
+<p>TWSA Training &amp; Services provides driver development, rider training, road safety, and transport workforce training solutions. We equip drivers, riders, fleet operators, and transport personnel with the knowledge, practical skills, and professional attitude required to operate safely and efficiently in today's transport environment.</p>
+<p>Our programs focus on promoting road safety, reducing operational risks, improving fleet performance, and supporting compliance with transport regulations and industry best practices.</p>
+<div class="btns" style="margin-top:22px">
+<a class="btn orange" href="#contact">Book driver training</a>
+<a class="btn ghost" href="tel:+256707128978">Call 0707 128 978</a>
+</div>
+</div>
+</div>
+<div class="dgrid">
+<article class="dcard">
+<div class="ph"><img data-img="hilux" alt="Trainees gathered around a pickup during a vehicle inspection session"></div>
+<h3>Driver Training Programs</h3>
+<ul>
+<li>Beginner Driver Training</li>
+<li>Defensive Driving Training</li>
+<li>Refresher Driver Training</li>
+<li>Corporate Driver Training</li>
+<li>4x4 Off-Road Training</li>
+<li>VIP Chauffeur Training</li>
+</ul>
+</article>
+<article class="dcard">
+<div class="ph"><img data-img="moto" alt="Motorcycle rider navigating cones on a training course"></div>
+<h3>Rider Training Programs</h3>
+<ul>
+<li>Motorcycle Rider Training</li>
+<li>Defensive Riding Techniques</li>
+<li>Commercial Rider (Boda) Training</li>
+<li>Delivery Rider Safety Training</li>
+<li>Inspection &amp; Maintenance Training</li>
+<li>Rider Road Safety Awareness</li>
+</ul>
+</article>
+<article class="dcard">
+<div class="ph"><img data-img="dfirst" alt="CPR practice on training manikins"></div>
+<h3>Safety &amp; Emergency</h3>
+<ul>
+<li>First Aid &amp; Emergency Response</li>
+<li>Fire Safety &amp; Fire Fighting</li>
+<li>Road Safety Awareness Training</li>
+<li>Occupational Health &amp; Safety</li>
+<li>Customer Care &amp; Professional Conduct</li>
+<li>Accident Prevention &amp; Risk Management</li>
+</ul>
+</article>
+</div>
+<div class="dwhy">
+<div class="ph">
+<img data-img="mirror" alt="Rear-view mirror showing a city road">
+<img data-img="wave" alt="Smiling driver waving from a car window">
+<img data-img="hardhat" alt="Safety professional wearing a yellow hard hat">
+</div>
+<div>
+<h3 style="font-size:1.8rem;margin-bottom:22px">Why choose our driving team?</h3>
+<ul>
+<li><b>Experienced trainers</b><span>Qualified instructors with practical industry experience and a passion for road safety.</span></li>
+<li><b>Practical learning approach</b><span>Theory combined with hands-on exercises for real-world skills and confidence.</span></li>
+<li><b>Safety-focused training</b><span>Every course emphasizes safe driving, responsible riding, hazard awareness and accident prevention.</span></li>
+<li><b>Flexible delivery</b><span>At our premises or client locations, with schedules tailored to participant needs.</span></li>
+<li><b>Registration &amp; certification</b><span>Structured training, assessments, and certificates of completion where applicable.</span></li>
+<li><b>Commitment to excellence</b><span>Continuous improvement, professionalism and customer satisfaction in every program.</span></li>
+</ul>
+</div>
+</div>
+<div class="dimpact">
+<div><b>100+</b><span>Individuals trained</span></div>
+<div><b>20+</b><span>Training sessions conducted</span></div>
+<div><b>20+</b><span>Organizations served</span></div>
+<div><b>10+</b><span>Training categories</span></div>
+<div><b>95%</b><span>Practical training approach</span></div>
+<div><b>100%</b><span>Commitment to safety &amp; professional development</span></div>
+</div>
+</div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+<div class="wrap">
+<div class="sec-head"><h2>Management and corporate governance</h2><p>The people who lead TWSA, backed by certified lead trainers for every course.</p></div>
+<div class="mgmt">
+<article class="person">
+<div class="avatar" aria-hidden="true">AS</div>
+<h3>Mr. Ahmed Sematimba</h3>
+<div class="role">Team Lead</div>
+<ul>
+<li>LLB (Mak) DIPLP (LDC)</li>
+<li>(LLM) Candidate (Occupational Health &amp; Safety) (Mak)</li>
+<li>IGC, NEBOSH (Candidate)</li>
+<li>Affiliate Member (IIRSM) UK, International Institute of Risk &amp; Safety Management</li>
+</ul>
+</article>
+<article class="person">
+<div class="avatar" aria-hidden="true">AT</div>
+<h3>Ahikire Talent</h3>
+<div class="role">Curriculum Development</div>
+<ul>
+<li>Bachelor of Arts with Education (BAED)</li>
+<li>Certified Fiber Optic Technician (CFOA)</li>
+<li>International Health &amp; Safety Passport (TASC)</li>
+<li>International Health &amp; Safety Passport (ECITB)</li>
+</ul>
+</article>
+<article class="person">
+<div class="avatar" aria-hidden="true">NE</div>
+<h3>Natima Edgar</h3>
+<div class="role">Project Manager</div>
+<ul>
+<li>Bachelor of Civil Engineering</li>
+<li>Scaffolding Inspection, Erection &amp; Dismantling Theory &amp; Practice, SGS Ltd Egypt (NCOSHA)</li>
+<li>Certificate in Management Theories &amp; Philosophies, University of East London</li>
+<li>Diploma in Environmental Health &amp; Management, UniAthena Global Education (IIRSM)</li>
+<li>Trainer of Trainees (TOT), Engineering Plant Machinery, National Plant Machinery &amp; Technical Training Institute, Kenya</li>
+</ul>
+</article>
+</div>
+
+<div class="trainers">
+<div class="trainer-photo"><img data-img="team" alt="Two TWSA trainers in high-visibility vests and coveralls"></div>
+<div class="trainer-list">
+<h3 class="ttl">Lead trainers</h3>
+<article><h4>Ineget Daniel<small>Defensive Driving</small></h4><p>Licensed Driving Instructor, MOWT (DIL-00021-01-01: Classes B, C1, C, CE, D1 &amp; D). ISO Certified Trainer: ISO 07621-70377.</p></article>
+<article><h4>Mubiru John Derrick<small>Basic First Aid</small></h4><p>Trainer of Trainees certificate in First Aid &amp; Fire Safety. Certificate in Standard First Aid Training, URCS. Community First Aid Responder, TOT certificate, Ministry of Health &amp; URCS.</p></article>
+<article><h4>Bwambale Raymond<small>Confined Space Entry</small></h4><p>Fire Service Instructor Certificate, Lethbridge Alberta, Canada. Certificate in Incident Command Systems (Levels 1 &amp; 2), Directorate of Fire Prevention &amp; Rescue. Trainer of Trainees Certificate.</p></article>
+<article><h4>Bwambale Raymond<small>Authorised Gas Tester</small></h4><p>Fire Service Instructor Certificate, Lethbridge Alberta, Canada. Certificate in Incident Command Systems (Levels 1 &amp; 2), Directorate of Fire Prevention &amp; Rescue. Trainer of Trainees Certificate.</p></article>
+<article><h4>Sekyanzi Isaac<small>Fire Marshall</small></h4><p>Trainer of Trainees certificate, Fire Prevention &amp; Safety (International Fire Safety Training Institute). Certificate in Fire Prevention &amp; Rescue Services and in Maritime Security, Uganda Police.</p></article>
+<article><h4>Magino Geraid<small>Water Diving &amp; Rescue</small></h4><p>Open Water Diver, PADI. Altitude diving course, Marine Diving &amp; Technical Service Limited. Diving, swimming, navigation, life saving &amp; marine rescue.</p></article>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="alt">
+<div class="wrap">
+<div class="sec-head"><h2>Recent projects</h2><p>Hands-on training delivered on client sites and in our classrooms. Tap any photo to enlarge it.</p></div>
+<div class="gallery" id="gallery"></div>
+</div>
+</section>
+
+<!-- CLIENTS -->
+<section id="clients">
+<div class="wrap">
+<div class="sec-head"><h2>Trusted by companies and institutions</h2><p>Individuals, businesses, and institutions seeking professional training solutions that promote safety, competence, and operational excellence.</p></div>
+<h3 class="sub-h">Our clients</h3>
+<div class="logos">
+<div class="logo-chip red">SINOPEC</div>
+<div class="logo-chip"><span>Excel Construction Ltd</span></div>
+<div class="logo-chip"><img data-img="terrain" alt="" width="44" height="44"><span>Terrain Services Ltd</span></div>
+<div class="logo-chip green">FARAS</div>
+<div class="logo-chip"><span>Seco Marine (U) Ltd</span></div>
+<div class="logo-chip red">Hygiene Consultants</div>
+<div class="logo-chip"><img data-img="buroni" alt="" width="44" height="44"><span>Buroni Services Ltd</span></div>
+<div class="logo-chip green">McDermott</div>
+<div class="logo-chip"><span>Inspecta Africa</span></div>
+<div class="logo-chip bluec">Plumb Base Uganda Ltd</div>
+</div>
+<h3 class="sub-h">Our partners</h3>
+<div class="logos">
+<div class="logo-chip navyc">Institute for Oil &amp; Gas Sector (IOGS)</div>
+<div class="logo-chip bluec">Dynaquest Energy Limited</div>
+<div class="logo-chip green">Score QC Training &amp; Services</div>
+<div class="logo-chip"><img data-img="deepex" alt="deepEX, your hazardous area partner" height="44"></div>
+</div>
+<h3 class="sub-h">Registration &amp; memberships</h3>
+<div class="logos" style="margin-bottom:0">
+<div class="logo-chip bluec">Highfield Qualifications</div>
+<div class="logo-chip red">PECB</div>
+<div class="logo-chip">Uganda Revenue Authority (URA)</div>
+<div class="logo-chip">Ministry of Works &amp; Transport</div>
+<div class="logo-chip">Ministry of Gender, Labour &amp; Social Development</div>
+<div class="logo-chip navyc">IIRSM</div>
+<div class="logo-chip">Petroleum Authority of Uganda</div>
+<div class="logo-chip bluec">Uganda Registration Services Bureau (URSB)</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<div class="wrap contact-grid">
+<div>
+<h2>Contact <span>us</span></h2>
+<dl>
+<div><dt>Address</dt><dd>Kyanja Ring Road, Opposite Kyanja Muslim Pri School.<br>P.O. Box 169494, Kampala GPO, Uganda</dd></div>
+<div><dt>Tel</dt><dd><a href="tel:+256707128978">+256 (0)707 128 978</a></dd></div>
+<div><dt>Email</dt><dd><a href="mailto:info@twsa.ug">info@twsa.ug</a></dd></div>
+<div><dt>Web</dt><dd><a href="https://www.twsa.ug" target="_blank" rel="noopener">www.twsa.ug</a></dd></div>
+</dl>
+<div class="contact-photo"><img data-img="p8" alt="TWSA trainees with certificates in front of site offices"></div>
+</div>
+<form id="enquiry" novalidate>
+<h3>Send an enquiry</h3>
+<div class="row2">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+</div>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>Course of interest
+<select name="course" id="courseSel"></select>
+</label>
+<label>Message<textarea name="msg" required placeholder="Tell us about your team, location and preferred dates."></textarea></label>
+<button class="btn blue" type="submit">Send enquiry</button>
+<p class="note" id="formNote" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="foot">
+<a class="brand" href="#top">
+<img data-img="logo" alt="" width="46" height="46">
+<span><b>TWSA</b><small>Stay Safe. Stay Smart. Stay Ahead.</small></span>
+</a>
+<nav aria-label="Footer">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#driving">Driving &amp; Rider</a>
+<a href="#team">Team</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+<div class="copy">
+<span>&copy; <span id="yr"></span> TWSA Trading Company Ltd. All rights reserved.</span>
+<span>Kyanja Ring Road, Kampala, Uganda</span>
+</div>
+</div>
+</footer>
+
+<button class="top" id="toTop" aria-label="Back to top">&#8593;</button>
+
+<dialog id="svcDlg" aria-labelledby="dTitle">
+<button class="close" aria-label="Close" data-close>&times;</button>
+<img class="dlg-img" id="dImg" alt="">
+<div class="dlg-body">
+<h3 id="dTitle"></h3>
+<p id="dText"></p>
+<h4>Key objectives</h4>
+<ul id="dList"></ul>
+<a class="btn blue" href="#contact" data-close id="dCta">Enquire about this course</a>
+</div>
+</dialog>
+<dialog id="lb" aria-label="Project photo">
+<button class="close" aria-label="Close" data-close>&times;</button>
+<img id="lbImg" alt="">
+<p id="lbCap"></p>
+</dialog>
+
+<script>
+// ===== IMAGE PLACEHOLDER DATA (using simple colored data URIs for demo) =====
+// In a real project, replace these with actual image URLs or base64 strings.
+const IMG = {
+logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232D56A6'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'%3ET%3C/text%3E%3C/svg%3E",
+hero: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Crect width='800' height='600' fill='%23E6F3FA'/%3E%3Ctext x='400' y='300' font-size='48' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EHERO IMAGE%3C/text%3E%3C/svg%3E",
+about: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23DCE9F8'/%3E%3Ctext x='300' y='200' font-size='32' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EABOUT IMAGE%3C/text%3E%3C/svg%3E",
+gas: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23E4E6EA'/%3E%3Ctext x='200' y='200' font-size='24' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EGAS DETECTOR%3C/text%3E%3C/svg%3E",
+drv: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 450'%3E%3Crect width='600' height='450' fill='%23E6F3FA'/%3E%3Ctext x='300' y='225' font-size='32' text-anchor='middle' fill='%230009D9' font-family='Arial'%3EDRIVING TRAINING%3C/text%3E%3C/svg%3E",
+drvcar: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DCE9F8'/%3E%3Ctext x='200' y='150' font-size='24' text-anchor='middle' fill='%230009D9' font-family='Arial'%3ECAR INTERIOR%3C/text%3E%3C/svg%3E",
+hilux: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3E4x4 TRAINING%3C/text%3E%3C/svg%3E",
+moto: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3ERIDER TRAINING%3C/text%3E%3C/svg%3E",
+dfirst: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EFIRST AID%3C/text%3E%3C/svg%3E",
+mirror: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E6F3FA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EMIRROR VIEW%3C/text%3E%3C/svg%3E",
+wave: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DCE9F8'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EDRIVER WAVING%3C/text%3E%3C/svg%3E",
+hardhat: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E4E6EA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EHARD HAT%3C/text%3E%3C/svg%3E",
+team: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23E6F3FA'/%3E%3Ctext x='200' y='250' font-size='28' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3ETRAINERS%3C/text%3E%3C/svg%3E",
+p1: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E4E6EA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 1%3C/text%3E%3C/svg%3E",
+p2: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DCE9F8'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 2%3C/text%3E%3C/svg%3E",
+p3: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E6F3FA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 3%3C/text%3E%3C/svg%3E",
+p4: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E4E6EA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 4%3C/text%3E%3C/svg%3E",
+p5: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23DCE9F8'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 5%3C/text%3E%3C/svg%3E",
+p6: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E6F3FA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 6%3C/text%3E%3C/svg%3E",
+p7: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23E4E6EA'/%3E%3Ctext x='200' y='150' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EPROJECT 7%3C/text%3E%3C/svg%3E",
+p8: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23DCE9F8'/%3E%3Ctext x='200' y='125' font-size='22' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3ECONTACT%3C/text%3E%3C/svg%3E",
+terrain: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' fill='%234DB3E0'/%3E%3Ctext x='22' y='28' font-size='18' text-anchor='middle' fill='white' font-family='Arial'%3ET%3C/text%3E%3C/svg%3E",
+buroni: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect width='44' height='44' fill='%232D56A6'/%3E%3Ctext x='22' y='28' font-size='18' text-anchor='middle' fill='white' font-family='Arial'%3EB%3C/text%3E%3C/svg%3E",
+deepex: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 44'%3E%3Crect width='120' height='44' fill='%231B2733'/%3E%3Ctext x='60' y='28' font-size='16' text-anchor='middle' fill='white' font-family='Arial'%3EdeepEX%3C/text%3E%3C/svg%3E",
+// Service card images
+svc_firstaid: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EFirst Aid%3C/text%3E%3C/svg%3E",
+svc_fire: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EFire Safety%3C/text%3E%3C/svg%3E",
+svc_confined: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EConfined Space%3C/text%3E%3C/svg%3E",
+svc_iecex: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EIECEx%3C/text%3E%3C/svg%3E",
+svc_thermal: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EThermal Imaging%3C/text%3E%3C/svg%3E",
+svc_bgas: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EGas Testing%3C/text%3E%3C/svg%3E",
+svc_rope: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3ERope Access%3C/text%3E%3C/svg%3E",
+svc_diving: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EDiving%3C/text%3E%3C/svg%3E",
+svc_agt: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EAuthorised Gas Tester%3C/text%3E%3C/svg%3E",
+svc_defdrive: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23E4E6EA'/%3E%3Ctext x='200' y='125' font-size='20' text-anchor='middle' fill='%232D56A6' font-family='Arial'%3EDefensive Driving%3C/text%3E%3C/svg%3E"
+};
+
+// ===== SET IMAGES =====
+document.querySelectorAll('[data-img]').forEach(el => {
+const key = el.getAttribute('data-img');
+if (IMG[key]) {
+el.src = IMG[key];
+} else {
+// fallback: gray placeholder
+el.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23E4E6EA'/%3E%3C/svg%3E";
+}
+});
+
+// ===== MENU =====
+const burger = document.querySelector('.burger');
+const menu = document.getElementById('menu');
+if (burger && menu) {
+burger.addEventListener('click', () => {
+const expanded = burger.getAttribute('aria-expanded') === 'true';
+burger.setAttribute('aria-expanded', !expanded);
+menu.classList.toggle('open');
+});
+
+// close menu when clicking a link
+menu.querySelectorAll('a').forEach(link => {
+link.addEventListener('click', () => {
+burger.setAttribute('aria-expanded', 'false');
+menu.classList.remove('open');
+});
+});
+}
+
+// ===== YEAR =====
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// ===== BACK TO TOP =====
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => {
+toTop.classList.toggle('show', window.scrollY > 400);
+});
+toTop.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== SERVICES DATA =====
+const services = [{
+title: "Basic First Aid",
+cat: "safety",
+img: "svc_firstaid",
+desc: "Essential life-saving skills for the workplace and community.",
+objectives: [
+"Assess emergency situations safely",
+"Perform CPR and rescue breathing",
+"Manage bleeding, burns and shock",
+"Handle fractures and head injuries",
+"Understand infection control"
+]
+},
+{
+title: "Fire Safety & Fire Fighting",
+cat: "safety",
+img: "svc_fire",
+desc: "Practical fire response and prevention training.",
+objectives: [
+"Understand fire chemistry and behaviour",
+"Use fire extinguishers correctly",
+"Evacuation procedures and drills",
+"Fire risk assessment basics",
+"Fire safety legislation awareness"
+]
+},
+{
+title: "Confined Space Entry",
+cat: "safety",
+img: "svc_confined",
+desc: "Safe entry, working and rescue in confined spaces.",
+objectives: [
+"Identify confined space hazards",
+"Use gas detection and ventilation",
+"Permit-to-work systems",
+"Emergency rescue procedures",
+"Personal protective equipment"
+]
+},
+{
+title: "IECEx & Hazardous Area",
+cat: "industrial",
+img: "svc_iecex",
+desc: "Understanding explosive atmospheres and equipment protection.",
+objectives: [
+"Classify hazardous areas",
+"Understand IECEx certification",
+"Select appropriate equipment",
+"Inspection and maintenance",
+"Safe working practices"
+]
+},
+{
+title: "Thermal Imaging",
+cat: "industrial",
+img: "svc_thermal",
+desc: "Infrared thermography for predictive maintenance.",
+objectives: [
+"Basics of infrared science",
+"Using thermal cameras",
+"Interpreting thermal images",
+"Electrical and mechanical applications",
+"Reporting and documentation"
+]
+},
+{
+title: "Basic Gas Testing",
+cat: "industrial",
+img: "svc_bgas",
+desc: "Safe use of gas detection equipment.",
+objectives: [
+"Types of gas detectors",
+"Calibration and bump testing",
+"Atmospheric monitoring",
+"Permit-to-work requirements",
+"Emergency response to gas alarms"
+]
+},
+{
+title: "Rope Access & Rescue",
+cat: "industrial",
+img: "svc_rope",
+desc: "Working at height and rescue techniques.",
+objectives: [
+"Rope access equipment and inspection",
+"Knots and rigging",
+"Ascending and descending",
+"Rescue techniques",
+"Fall protection regulations"
+]
+},
+{
+title: "Water Diving & Rescue",
+cat: "industrial",
+img: "svc_diving",
+desc: "Commercial diving safety and rescue operations.",
+objectives: [
+"Diving physics and physiology",
+"Scuba equipment use",
+"Underwater search patterns",
+"Rescue and recovery",
+"Dive planning and safety"
+]
+},
+{
+title: "Authorised Gas Tester",
+cat: "safety",
+img: "svc_agt",
+desc: "Competence for gas testing in industrial environments.",
+objectives: [
+"Gas properties and hazards",
+"Testing procedures for hot work",
+"Confined space entry testing",
+"Records and documentation",
+"Emergency procedures"
+]
+},
+{
+title: "Defensive Driving",
+cat: "driving",
+img: "svc_defdrive",
+desc: "Advanced driving techniques to reduce road risk.",
+objectives: [
+"Hazard perception and anticipation",
+"Vehicle control in emergencies",
+"Fatigue and distraction management",
+"Safe following distances",
+"Journey planning and risk assessment"
+]
+}
+];
+
+// ===== RENDER SERVICES =====
+const svcGrid = document.getElementById('svcGrid');
+const courseSel = document.getElementById('courseSel');
+
+function renderServices() {
+svcGrid.innerHTML = services.map((s, i) => `
+<button class="svc" data-cat="${s.cat}" data-index="${i}" aria-haspopup="dialog">
+<div class="ph"><img src="${IMG[s.img] || IMG.svc_firstaid}" alt="${s.title}"></div>
+<h3>${s.title}</h3>
+<div class="tx">
+<span>${s.desc}</span>
+<span class="more">Learn more →</span>
+</div>
+</button>
+`).join('');
+
+// populate select options
+courseSel.innerHTML = `<option value="">Select a course…</option>` +
+services.map(s => `<option value="${s.title}">${s.title}</option>`).join('');
+
+// add click listeners
+svcGrid.querySelectorAll('.svc').forEach(btn => {
+btn.addEventListener('click', () => {
+const idx = btn.getAttribute('data-index');
+openServiceDialog(services[idx]);
+});
+});
+}
+
+// ===== FILTERS =====
+document.querySelectorAll('.filters button').forEach(btn => {
+btn.addEventListener('click', () => {
+document.querySelectorAll('.filters button').forEach(b => b.setAttribute('aria-pressed', 'false'));
+btn.setAttribute('aria-pressed', 'true');
+const filter = btn.getAttribute('data-f');
+svcGrid.querySelectorAll('.svc').forEach(card => {
+if (filter === 'all' || card.getAttribute('data-cat') === filter) {
+card.removeAttribute('hidden');
+} else {
+card.setAttribute('hidden', '');
+}
+});
+});
+});
+
+// ===== SERVICE DIALOG =====
+const svcDlg = document.getElementById('svcDlg');
+const dTitle = document.getElementById('dTitle');
+const dText = document.getElementById('dText');
+const dList = document.getElementById('dList');
+const dImg = document.getElementById('dImg');
+
+function openServiceDialog(service) {
+dTitle.textContent = service.title;
+dText.textContent = service.desc;
+dList.innerHTML = service.objectives.map(o => `<li>${o}</li>`).join('');
+dImg.src = IMG[service.img] || IMG.svc_firstaid;
+svcDlg.showModal();
+}
+
+// ===== PROJECTS GALLERY =====
+const galleryData = [
+{ img: "p1", title: "On-site Safety Training", year: "2025" },
+{ img: "p2", title: "Defensive Driving Course", year: "2025" },
+{ img: "p3", title: "Fire Fighting Drill", year: "2024" },
+{ img: "p4", title: "Confined Space Rescue", year: "2024" },
+{ img: "p5", title: "First Aid Certification", year: "2025" },
+{ img: "p6", title: "Gas Testing Workshop", year: "2024" },
+{ img: "p7", title: "Rope Access Training", year: "2023" },
+{ img: "p8", title: "Corporate Group Session", year: "2025" }
+];
+
+const gallery = document.getElementById('gallery');
+if (gallery) {
+gallery.innerHTML = galleryData.map((item, i) => `
+<button class="gal ${i === 0 ? 'big' : ''}" data-img="${item.img}" data-title="${item.title}" data-year="${item.year}" aria-label="View ${item.title}">
+<img src="${IMG[item.img]}" alt="${item.title}">
+<span>${item.title}<em>${item.year}</em></span>
+</button>
+`).join('');
+
+gallery.querySelectorAll('.gal').forEach(btn => {
+btn.addEventListener('click', () => {
+const imgKey = btn.getAttribute('data-img');
+const title = btn.getAttribute('data-title');
+const year = btn.getAttribute('data-year');
+const lb = document.getElementById('lb');
+document.getElementById('lbImg').src = IMG[imgKey] || IMG.p1;
+document.getElementById('lbCap').textContent = `${title} (${year})`;
+lb.showModal();
+});
+});
+}
+
+// ===== DIALOG CLOSE HANDLERS =====
+document.querySelectorAll('[data-close]').forEach(btn => {
+btn.addEventListener('click', (e) => {
+e.preventDefault();
+const dlg = btn.closest('dialog');
+if (dlg) dlg.close();
+});
+});
+
+// close on backdrop click
+document.querySelectorAll('dialog').forEach(dlg => {
+dlg.addEventListener('click', (e) => {
+if (e.target === dlg) dlg.close();
+});
+});
+
+// ===== STATS COUNTER =====
+function animateStats() {
+document.querySelectorAll('[data-count]').forEach(el => {
+if (el.dataset.animated) return;
+const rect = el.getBoundingClientRect();
+if (rect.top < window.innerHeight && rect.bottom > 0) {
+el.dataset.animated = 'true';
+const target = parseInt(el.getAttribute('data-count'), 10);
+const suffix = el.getAttribute('data-suffix') || '';
+let current = 0;
+const step = Math.ceil(target / 40);
+const timer = setInterval(() => {
+current += step;
+if (current >= target) {
+current = target;
+clearInterval(timer);
+}
+el.textContent = current + suffix;
+}, 25);
+}
+});
+}
+window.addEventListener('scroll', animateStats);
+window.addEventListener('load', () => {
+animateStats();
+renderServices();
+});
+
+// ===== FORM =====
+const form = document.getElementById('enquiry');
+const formNote = document.getElementById('formNote');
+if (form) {
+form.addEventListener('submit', (e) => {
+e.preventDefault();
+const name = form.name.value.trim();
+const email = form.email.value.trim();
+if (!name || !email) {
+formNote.textContent = 'Please fill in your name and email.';
+formNote.style.color = '#D42A2A';
+return;
+}
+formNote.textContent = 'Thank you! We will get back to you shortly.';
+formNote.style.color = '#0F8A3C';
+form.reset();
+});
+}
+</script>
+</body>
+</html>
